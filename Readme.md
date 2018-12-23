@@ -1,6 +1,6 @@
 # PrestaShop blockreassurancerich
 ### Customer reassurance, with rich text
-Same as original *blockreassurnace* by PrestaShop, but supports rich text, allowing the formatting of reassurence items, with links and stuff. Attention: you should disable or uninstall the orignal blockreassurance module as this module replaces it.
+Same as original *blockreassurnace* by PrestaShop, but supports rich text, allowing the formatting of reassurence items, with links and stuff. *Attention: you should disable or uninstall the orignal blockreassurance module as this module replaces it.*
 
 **Based on blockreassurance 3.0.1 for Prestashop 1.7**
 
