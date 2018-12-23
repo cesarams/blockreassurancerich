@@ -5,8 +5,8 @@ Same as original *blockreassurnace* by PrestaShop, but supports rich text, allow
 **Based on blockreassurance 3.0.1 for Prestashop 1.7**
 
 **Instructions**
-* Disable/unsinstall original blockreassurance module
-* Install blockreassurancerich
+* Disable/uninstall original blockreassurance module (I would recommend to install it)
+* Install blockreassurancerich as usual
 * Configure reassurance items like usual, while making use of the rich text editor to add links and stuff *(for design consistency, I would personally refrain from adding anything else but links, but you can go nuts if you want)*
 * Clear cache if you can't see the changes in the FO
 
