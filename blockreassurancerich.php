@@ -156,6 +156,8 @@ class Blockreassurancerich extends Module implements WidgetInterface
 
     public function getContent()
     {
+        $date = new DateTime();
+        $timestamp = $date->getTimestamp();
         $html = '';
         $id_reassurance = (int)Tools::getValue('id_reassurance');
 
@@ -177,12 +179,12 @@ class Blockreassurancerich extends Module implements WidgetInterface
                         return false;
                     } elseif (!($tmpName = tempnam(_PS_TMP_IMG_DIR_, 'PS')) || !move_uploaded_file($_FILES['image']['tmp_name'], $tmpName)) {
                         return false;
-                    } elseif (!ImageManager::resize($tmpName, dirname(__FILE__).'/img/reassurance-'.(int)$reassurance->id.'-'.(int)$reassurance->id_shop.'.jpg')) {
+                    } elseif (!ImageManager::resize($tmpName, dirname(__FILE__).'/img/reassurance-'.(int)$reassurance->id.'-'.(int)$reassurance->id_shop.'-'.$timestamp.'.jpg')) {
                         return false;
                     }
 
                     unlink($tmpName);
-                    $reassurance->file_name = 'reassurance-'.(int)$reassurance->id.'-'.(int)$reassurance->id_shop.'.jpg';
+                    $reassurance->file_name = 'reassurance-'.(int)$reassurance->id.'-'.(int)$reassurance->id_shop.'-'.$timestamp.'.jpg';
                     $reassurance->save();
                 }
                 $this->_clearCache('*');
