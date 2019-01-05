@@ -151,7 +151,7 @@ class Blockreassurancerich extends Module implements WidgetInterface
 
     public function hookDisplayHeader($params)
     {
-        $this->context->controller->registerStylesheet('modules-blockreassurancerich', 'modules/' . $this->name . '/views/css/blockreassurancerich.css', array('media' => 'all', 'priority' => 150));
+        $this->context->controller->addCSS($this->_path.'views/css/blockreassurancerich.css', 'all');
     }
 
     public function getContent()
